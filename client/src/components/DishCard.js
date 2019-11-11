@@ -31,21 +31,21 @@ class DishCard extends React.Component {
 
   // TODO: Add conditional rendering
   render() {
-    // if(!this.state.name) return null;
+    let on = Boolean(this.state.name);
     return (
       <div className="DishCard" type={`${this.props.type}_dish_card`}>
         <div>
           <h2>{this.state.name}</h2>
-          <h3>{this.state.ingredients ? 'Ingredients' : null}</h3>
+          <h3>{on ? '~Ingredients~' : null}</h3>
           <ol>
             {this.listify(this.state.ingredients)}
           </ol>
-          <h3>{this.state.steps ? 'Steps' : null}</h3>
+          <h3>{on ? '~Steps~' : null}</h3>
           <ol> 
             {this.listify(this.state.steps)}
           </ol>
-          <p>{this.state.readyTime ? `Ready in : ${this.state.readyTime}` : null}</p>
-          <p>{this.state.nutrition ? `Nutrition: ${this.state.nutrition}` : null}</p>
+          <h3>{on ? '~Ready time~' : null}</h3><p>{on ? `${this.state.readyTime}` : null}</p>
+          <h3>{on ? '~Nutrition~:' : null}</h3><p>{on ? `${this.state.nutrition}` : null}</p>
         </div>
 
         <button className="button button1" onClick={this.setNewDish.bind(this)}> 
