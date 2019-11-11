@@ -9,7 +9,7 @@ class DishCard extends React.Component {
   }
 
   async getNewDish() {
-    const response = await axios.get(`http://localhost:5000/new/${this.props.type}`)
+    const response = await axios.get(`https://bum-kat-meal.herokuapp.com/new/${this.props.type}`)
     const newDish = response.data;
     return newDish
   }

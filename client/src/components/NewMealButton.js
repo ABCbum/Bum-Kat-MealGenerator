@@ -8,7 +8,7 @@ class NewMealButton extends React.Component {
   }
 
   async getNewMeal() {
-    const response = await axios.get(`http://localhost:5000/new`)
+    const response = await axios.get(`https://bum-kat-meal.herokuapp.com/new`)
     const newMeal = response.data;
     return newMeal
   }
