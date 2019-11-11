@@ -1,0 +1,27 @@
+import axios from 'axios'
+import React from 'react'
+
+class NewMealButton extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = {};
+  }
+
+  async getNewMeal() {
+    const response = await axios.get(`http://localhost:5000/new`)
+    const newMeal = response.data;
+    return newMeal
+  }
+  
+
+
+  render() {
+    return (
+      <button id="" className="button button1" >
+      New 
+      </button>
+    );
+  }
+}
+
+export default NewMealButton
