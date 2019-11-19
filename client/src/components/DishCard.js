@@ -40,8 +40,8 @@ class DishCard extends React.Component {
           />
         }
       <div>
-        {hasContent && <a className="changeLang" onClick={this.changeLang.bind(this, 'vi')}>VI</a>}
-        {hasContent && <a className="changeLang" onClick={this.changeLang.bind(this, 'en')}>EN</a>}
+        {hasContent && <p className="changeLang" onClick={this.changeLang.bind(this, 'vi')}>VI </p>}
+        {hasContent && <p className="changeLang" onClick={this.changeLang.bind(this, 'en')}> EN</p>}
       </div>
         <button className="button button1" onClick={this.setNewDish.bind(this)}> 
           Get new {this.props.type}

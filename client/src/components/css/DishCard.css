@@ -5,6 +5,11 @@
 }
 
 .changeLang {
-  color: #738276;
-  font-size: 13px;
+  color: #272727;
+  font-size: 18px;
+  display: inline;
+}
+
+.changeLang:hover {
+  cursor: context-menu;
 }
