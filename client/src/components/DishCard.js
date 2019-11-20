@@ -33,6 +33,9 @@ class DishCard extends React.Component {
     
     return (
       <div className="DishCard" type={`${this.props.type}_dish_card`}>
+        <button className="button button1" onClick={this.setNewDish.bind(this)}> 
+          Get new {this.props.type}
+        </button>
         {hasContent && 
           <DishCardContent 
             content={dish}
@@ -43,11 +46,8 @@ class DishCard extends React.Component {
         {hasContent && <p className="changeLang" onClick={this.changeLang.bind(this, 'vi')}>VI </p>}
         {hasContent && <p className="changeLang" onClick={this.changeLang.bind(this, 'en')}> EN</p>}
       </div>
-        <button className="button button1" onClick={this.setNewDish.bind(this)}> 
-          Get new {this.props.type}
-        </button>
-        <br></br>
-        ----------------------------
+      <br></br>
+      ----------------------------
       </div>
     )
   }

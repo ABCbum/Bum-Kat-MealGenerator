@@ -5,6 +5,7 @@ import DishCard from './components/DishCard';
 function App() {
   return (
     <div className="App">
+      <h1>Let's eat</h1>
       <DishCard type="dessert" />
       <DishCard type="dinner" />
       <DishCard type="lunch" />
